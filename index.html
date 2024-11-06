@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
+<html lang="en">
   <head>
-    <title></title>
+    <title>Pizza Order</title>
 
     <!-- MDL Inclusions -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_orange-blue.min.css">
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
   </head>
@@ -12,7 +13,35 @@
   <body>
   
     <form name="myForm" action="handler.php" method="POST">
-          
+
+    <!-- Always shows a header, even in smaller screens. -->
+      <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+          <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="mdl-layout-title">Pizza Order</span>
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+          </div>
+        </header>
+        <main class="mdl-layout__content">
+          <div class="page-content"><br>
+      
+      <!--Page content-->
+      <label>Would you like a large or extra large pizza? (enter 'large' or
+         'extra large'): </label>
+      <input type="text" name="size" required>
+
+      <br><br>
+
+      <label>Number of toppings (1-4): </label>
+      <input type="number" name="toppings" id="toppings" min="1" max="4" required>
+
+      <br><br>
+
+      <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect 
+        mdl-button--colored" type="submit">Submit</button>
+      
     </form>
 
   </body>
